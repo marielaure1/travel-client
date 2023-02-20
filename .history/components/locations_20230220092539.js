@@ -219,8 +219,7 @@ export default {
                 body: JSON.stringify(datas.id) 
             })
             .then((response) => {
-                response
-                .json()
+                response.json()
                   .then((data) => {
                     console.log(data);
                     this.get()

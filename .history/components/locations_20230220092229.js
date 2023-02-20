@@ -220,11 +220,13 @@ export default {
             })
             .then((response) => {
                 response
-                .json()
+                  .json()
                   .then((data) => {
                     console.log(data);
-                    this.get()
                     this.responseDelete = data
+                    
+                    
+                    console.log(responseDelete);
                   })
                   .catch((e) => {
                     console.log(e);

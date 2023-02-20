@@ -207,24 +207,20 @@ export default {
             });
         },
         deleteLocation(idDelete){
-            let datas = {
-                "id": idDelete 
-            }
             
             fetch(`${this.API_URL}/locations/${idDelete}`, { 
                 method: "DELETE",
                 headers: {
                 'Content-Type': 'application/json'
-                } ,
-                body: JSON.stringify(datas.id) 
+                } 
             })
             .then((response) => {
                 response
-                .json()
-                  .then((data) => {
-                    console.log(data);
+                  .json()
+                  .then((data) => {zzz
                     this.get()
                     this.responseDelete = data
+                    console.log(responseDelete);
                   })
                   .catch((e) => {
                     console.log(e);

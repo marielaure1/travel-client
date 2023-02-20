@@ -206,7 +206,7 @@ export default {
                 console.log(e);
             });
         },
-        deleteLocation(idDelete){
+        deleteLocation(idDelete){=
             let datas = {
                 "id": idDelete 
             }
@@ -220,11 +220,13 @@ export default {
             })
             .then((response) => {
                 response
-                .json()
+                  .json()
                   .then((data) => {
                     console.log(data);
-                    this.get()
                     this.responseDelete = data
+                    this.get()
+                    
+                    console.log(responseDelete);
                   })
                   .catch((e) => {
                     console.log(e);

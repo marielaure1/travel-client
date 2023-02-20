@@ -215,16 +215,17 @@ export default {
                 method: "DELETE",
                 headers: {
                 'Content-Type': 'application/json'
-                } ,
-                body: JSON.stringify(datas.id) 
+                } 
             })
             .then((response) => {
                 response
-                .json()
+                  .json()
                   .then((data) => {
                     console.log(data);
-                    this.get()
                     this.responseDelete = data
+                    this.get()
+                    
+                    console.log(responseDelete);
                   })
                   .catch((e) => {
                     console.log(e);

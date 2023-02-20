@@ -215,6 +215,12 @@ export default {
             });
         },
         deletePlace(idDelete){
+            fetch(`${this.API_URL}/places/${idDelete}`, { 
+                method: "DELETE",
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+             })
             let id = {
                 "id": idDelete 
             }
