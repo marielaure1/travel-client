@@ -211,28 +211,29 @@ export default {
                 "id": idDelete 
             }
             
-            fetch(`${this.API_URL}/locations/${idDelete}`, { 
+            const response = fetch(`${this.API_URL}/locations/${idDelete}`, { 
                 method: "DELETE",
                 headers: {
                 'Content-Type': 'application/json'
                 } ,
                 body: JSON.stringify(datas.id) 
             })
-            .then((response) => {
-                this.get()
-                response
-                  .json()
-                  .then((data) => {
-                    console.log(data);
-                    this.responseDelete = data
-                  })
-                  .catch((e) => {
-                    console.log(e);
-                  });
-            })
-            .catch((e) => {
-                console.log(e);
-            });
+
+            const data = 
+            // .then(response => )
+            // .then(data => {
+            //     try {
+            //         console.log(data);
+            //         this.get()
+            //         this.responseDelete = data
+            //     } catch (error) {
+            //         console.error('Invalid JSON:', data);
+            //     }
+            //     // traitement du JSON
+            // })
+            // .catch((e) => {
+            //     console.log(e);
+            // });
         }
     },
     mounted(){

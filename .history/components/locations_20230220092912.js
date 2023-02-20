@@ -218,12 +218,21 @@ export default {
                 } ,
                 body: JSON.stringify(datas.id) 
             })
+            .then(response => response.json())
+  .then(data => {
+    try {
+      JSON.parse(data);
+    } catch (error) {
+      console.error('Invalid JSON:', data);
+    }
+    // traitement du JSON
+  })
             .then((response) => {
-                this.get()
                 response
-                  .json()
+                .json()
                   .then((data) => {
                     console.log(data);
+                    this.get()
                     this.responseDelete = data
                   })
                   .catch((e) => {

@@ -219,12 +219,15 @@ export default {
                 body: JSON.stringify(datas.id) 
             })
             .then((response) => {
-                this.get()
                 response
                   .json()
                   .then((data) => {
                     console.log(data);
+                    
                     this.responseDelete = data
+                    
+                    
+                    console.log(responseDelete);
                   })
                   .catch((e) => {
                     console.log(e);

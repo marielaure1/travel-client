@@ -224,6 +224,7 @@ export default {
                   .json()
                   .then((data) => {
                     console.log(data);
+                    this.get()
                     this.responseDelete = data
                   })
                   .catch((e) => {

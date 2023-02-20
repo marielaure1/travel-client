@@ -140,9 +140,6 @@ export default {
              
               
             })
-            .catch((e) => {
-                console.log(e);
-            });
         },
         initForm(){
             this.name = ""
@@ -283,7 +280,7 @@ export default {
         }
     },
     mounted(){
-        
+        LOG
 
         this.get()
     }

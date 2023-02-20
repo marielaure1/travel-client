@@ -140,9 +140,6 @@ export default {
              
               
             })
-            .catch((e) => {
-                console.log(e);
-            });
         },
         initForm(){
             this.name = ""
@@ -230,11 +227,12 @@ export default {
                 body: JSON.stringify(id) 
             })
             .then((response) => {
-                this.get()
                 response
                   .json()
                   .then((data) => {
+                    console.log(data);
                     this.responseDelete = data
+                    this.get()
                     
                   })
                   .catch((e) => {
@@ -283,7 +281,6 @@ export default {
         }
     },
     mounted(){
-        
 
         this.get()
     }

@@ -31,6 +31,9 @@ const options = {
         }
     },
     mounted(){
+
+        
+          
         setInterval(this.getRandomImage(), 60000);
     }
 }

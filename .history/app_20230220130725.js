@@ -31,6 +31,9 @@ const options = {
         }
     },
     mounted(){
+
+        
+          
         setInterval(this.getRandomImage(), 60000);
     }
 }
@@ -38,7 +41,7 @@ const options = {
 const routes = [
     { path: '/index.html', redirect: "/" },
     { path: '/', component: Locations, props: {API_URL: API_URL} },
-    { path: '/:sluglocation/:id(\\d+)', component: Location, name: 'location', props: {API_URL: API_URL}},
+    { path: '/:sluglocation/:id(\\d+) ', component: Location, name: 'location', props: {API_URL: API_URL}},
     { path: '/places/:slugplace/:id(\\d+)', component: Place, props: {API_URL: API_URL} , name: "place"},
 ]
 const router = VueRouter.createRouter({
