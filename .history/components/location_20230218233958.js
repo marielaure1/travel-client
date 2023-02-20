@@ -1,0 +1,38 @@
+export default {
+    props: ["API_URL"],
+    data(){
+        return {
+            location: ""
+        };
+    },
+    template: `
+        <div class="location">
+            <h2>{{location.name}}</h2>
+            <p>{{location.created_at}}</p>
+            <p>{{location.updated_at}}</p>
+            <p>{{location.lat}}</p>
+            <p>{{location.lng}}</p>
+            <router-link :to="{ name: 'places'}" class="card">Places</router-link>
+            <<form @submit.prevent="create">
+            <input type="text" name="name" placeholder="Nom du lieu/ville" v-model="name">
+            <input type="text" name="lat" placeholder="Latitude" v-model="lat">
+            <input type="text" name="lng" placeholder="Longitude" v-model="lng">
+            <button type="submit">Ajouter</button>
+        </form>
+        </div>
+        <router-view></router-view>
+    `,
+    methods: {
+        delete(){
+           console.log("test")
+        }
+    },
+    mounted(){
+        fetch(`${this.API_URL}/locations/${this.$route.params.id}`, { method: "GET" })
+        .then(response => response.json())
+        .then(json => {
+            console.log(json);
+            this.location = json
+        })
+    }
+}

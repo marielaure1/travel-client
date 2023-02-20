@@ -1,0 +1,222 @@
+:root{
+    --title: 'Playfair Display', serif;
+    --primary: 'Poppins', sans-serif;
+}
+
+body{
+    font-family: var(--primary);
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+#bg-image{
+    background-image: url("../ian-dooley-DuBNA1QMpPA-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+#app{
+    /* background-color: rgba(0, 0, 0, 0.356); */
+    height: 100%;
+    width: 100%;
+    padding: 5vw;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    color: white;
+    font-family: var(--primary);
+    font-size: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+    mix-blend-mode: difference;
+}
+
+.locations{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 15px;
+}
+
+.card{
+    background-color: rgba(255, 255, 255, 0.479);
+    backdrop-filter: blur(3px);
+    padding: 20px;
+    color: black;
+    aspect-ratio: 1/1;
+}
+
+.card a{
+    color: black;
+}
+
+.card a h3{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.card a p{
+    text-align: center;
+}
+
+.card div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card div:nth-child(2) button{
+    background-color: transparent;
+    border: black 1px solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+
+.card div:nth-child(2) button iconify-icon{
+    color: black;
+    font-size: 20px;
+}
+
+.card div:nth-child(2) button:hover{
+    transform: scale(1.1);
+}
+
+.card div:nth-child(2) button:nth-child(1){
+    margin-right: 10px;
+    border-color: #00c3ca;
+}
+.card div:nth-child(2) button:nth-child(1) iconify-icon{
+    color: #00c3ca;
+}
+
+.card div:nth-child(2) button:nth-child(2){
+    border-color: #6800ca;
+}
+.card div:nth-child(2) button:nth-child(2) iconify-icon{
+    color: #6800ca;
+}
+
+.form{
+    width: 100%;
+    max-width: 600px;
+    height: fit-content;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form .content{
+    width: 90%;
+}
+
+.form .content input{
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.btn{
+    color: white;
+    background-color: rgb(226, 0, 57);
+    padding: 8px 20px;
+}
+
+.btn:hover{
+    background-color: rgb(173, 0, 43);
+}
+
+.form .error{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.form .close{
+    margin: 0 0 auto auto;
+    font-size: 30px;
+}
+
+.form.active{
+    display: flex;
+}
+
+.center{
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 30px;
+}
+
+.message{
+    position: fixed;
+    top: 30px;
+    left: 0px;
+    background: #ffffffd4;
+    padding: 20px;
+    display: none;
+}
+
+.message.active{
+    display: block;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+}
+
+.grid-container > div{
+    background: #ffffffd4;
+}
+
+.grid-container > div h2{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.grid-container > div p{
+    margin-bottom: 20px;
+}
+
+.places{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: ;
+}
